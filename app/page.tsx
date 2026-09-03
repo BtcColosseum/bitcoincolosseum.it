@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Script from "next/script";
+import { BtcpayModalController, SupportCheckout, TshirtCheckout } from "@/components/btcpay-checkout";
 import { ContactForm } from "@/components/contact-form";
 import { Header } from "@/components/header";
 import { ArrowUpRight, Telegram, XLogo } from "@/components/icons";
@@ -39,9 +41,48 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="supporta" className="funding" aria-labelledby="funding-title">
+        <div className="funding-intro">
+          <p className="section-number">[ 00 / SOSTIENI IL BLOCCO ]</p>
+          <h2 id="funding-title">Roma non si<br />costruisce <em>da sola.</em></h2>
+          <p>Bitcoin Colosseum è gratuito e indipendente. Una T-shirt prenotata o una donazione ci aiutano a pagare lo spazio e a rendere migliore il prossimo evento.</p>
+        </div>
+
+        <div className="funding-options">
+          <article className="funding-card shop-card">
+            <div className="shop-visual">
+              <Image src="/images/tshirt.jpg" alt="T-shirt ufficiale Bitcoin Colosseum" fill sizes="(max-width: 700px) 100vw, 50vw" />
+              <span className="online-badge">Solo online</span>
+            </div>
+            <div className="funding-card-copy">
+              <div className="funding-card-meta"><span>01 / Shop</span><span>40.000 sats</span></div>
+              <h3>Prenota la tua<br /><em>T-shirt.</em></h3>
+              <p>Edizione Bitcoin Colosseum in cotone pesante, vestibilità ampia. La prenoti online adesso e la ritiri di persona all&apos;evento di Roma.</p>
+              <p className="funding-note">Non sarà acquistabile sul posto · Ritiro il 14 novembre 2026</p>
+              <TshirtCheckout />
+            </div>
+          </article>
+
+          <article className="funding-card support-card">
+            <div className="support-statement" aria-hidden="true">
+              <span>Proof of support</span>
+              <strong>₿</strong>
+              <p>Libero.<br />Indipendente.<br />A Roma.</p>
+            </div>
+            <div className="funding-card-copy">
+              <div className="funding-card-meta"><span>02 / Supportaci</span><span>Scegli tu quanto</span></div>
+              <h3>Metti energia<br />nel prossimo <em>blocco.</em></h3>
+              <p>Ogni sat va direttamente all&apos;evento: location, ospiti e un&apos;esperienza migliore per tutta la community. Nessun intermediario, tramite BTCPay Server.</p>
+              <p className="funding-note">Donazione disponibile esclusivamente online</p>
+              <SupportCheckout />
+            </div>
+          </article>
+        </div>
+      </section>
+
       <section className="newsletter" aria-labelledby="newsletter-title">
         <div>
-          <p className="section-number">[ 00 / UPDATE ]</p>
+          <p className="section-number">[ UPDATE ]</p>
           <h2 id="newsletter-title">Resta nel<br /><em>blocco.</em></h2>
         </div>
         <div className="newsletter-copy">
@@ -55,7 +96,7 @@ export default function Home() {
           <Image src="/images/events.jpg" alt="Dettaglio architettonico del Colosseo" fill sizes="(max-width: 800px) 100vw, 42vw" />
         </div>
         <div className="events-heading">
-          <p className="section-number">[ 01 / EVENTI ]</p>
+          <p className="section-number">[ 02 / EVENTI ]</p>
           <h2>Non una<br />conference.<br /><em>Una community.</em></h2>
           <p>Persone, idee e protocolli si incontrano nel cuore di Roma. Nessun palco, nessuna distanza: solo peer-to-peer.</p>
         </div>
@@ -99,7 +140,7 @@ export default function Home() {
       </section>
 
       <section className="archive" aria-labelledby="archive-title">
-        <div className="archive-header"><p className="section-number">[ 02 / ARCHIVIO ]</p><h2 id="archive-title">Blocchi<br /><em>precedenti.</em></h2></div>
+        <div className="archive-header"><p className="section-number">[ 03 / ARCHIVIO ]</p><h2 id="archive-title">Blocchi<br /><em>precedenti.</em></h2></div>
         <article className="archive-item">
           <div className="archive-date"><strong>25</strong><span>Aprile 2026<br />17:00—21:00</span></div>
           <div><p className="event-kicker">Atom Space · Roma</p><h3>2° Incontro Bitcoin Colosseum</h3><p>Una serata dedicata all&apos;ecosistema Bitcoin, con particolare attenzione a Lightning, Nostr, Cashu e BitChat. Un incontro dal vivo tra appassionati, curiosi e builder.</p></div>
@@ -118,7 +159,7 @@ export default function Home() {
           <p>Proof of<br /><em>community.</em></p>
         </div>
         <div className="contact-content">
-          <p className="section-number">[ 03 / PARLIAMONE ]</p>
+          <p className="section-number">[ 04 / PARLIAMONE ]</p>
           <h2 id="contact-title">Vuoi supportare<br />i prossimi <em>eventi?</em></h2>
           <p>Collaboriamo con aziende, progetti e community che condividono i nostri valori. Scrivici e costruiamo insieme il prossimo blocco.</p>
           <ContactForm />
@@ -135,6 +176,8 @@ export default function Home() {
           <div><a href="https://t.me/BtcColosseum" aria-label="Telegram"><Telegram /></a><a href="https://x.com/BtcColosseum" aria-label="X"><XLogo /></a></div>
         </div>
       </footer>
+      <BtcpayModalController />
+      <Script src="https://shop.bitcoincolosseum.it/modal/btcpay.js" strategy="afterInteractive" />
     </main>
   );
 }

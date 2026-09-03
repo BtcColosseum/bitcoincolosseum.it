@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   description:
     "Bitcoin Colosseum è la conference indipendente di Roma dedicato a Bitcoin, Lightning, Nostr, Bitchat, Cashu, Arkade e alla community peer-to-peer.",
   keywords: ["bitcoin", "roma", "conference", "lightning", "nostr", "bitchat", "cashu", "arkade", "community"],
+  icons: {
+    icon: "/images/logo.svg",
+  },
   openGraph: {
     title: "Bitcoin Colosseum",
     description: "Il punto di riferimento per Bitcoin a Roma.",

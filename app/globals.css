@@ -15,6 +15,11 @@ a { color: inherit; text-decoration: none; }
 button, input, textarea, select { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 ::selection { color: var(--ink); background: var(--orange); }
+html.btcpay-open, html.btcpay-open body { height: 100%; overflow: hidden; overscroll-behavior: none; }
+iframe[name="btcpay"] { width: 100vw !important; height: 100dvh !important; max-height: 100dvh; }
+.btcpay-close { position: fixed; z-index: 2100; top: max(16px, env(safe-area-inset-top)); right: max(16px, env(safe-area-inset-right)); width: 46px; height: 46px; padding: 12px; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; color: white; background: rgba(10,10,9,.9); box-shadow: 0 5px 25px rgba(0,0,0,.3); cursor: pointer; }
+.btcpay-close svg { display: block; width: 100%; height: 100%; }
+.btcpay-close:hover { color: var(--ink); background: var(--orange); border-color: var(--orange); }
 
 .site-header { height: 84px; padding: 0 3vw; display: flex; align-items: center; gap: 2.5vw; position: absolute; inset: 0 0 auto; z-index: 20; border-bottom: 1px solid rgba(255,255,255,.25); }
 .logo-link { display: block; width: auto; height: 68px; position: relative; z-index: 2; }
@@ -72,6 +77,36 @@ em { color: var(--orange); font-family: Georgia, serif; font-weight: 400; text-t
 .form-status.success { color: #357946; }
 .form-status.error { color: #ffb5a8; }
 .form-status.configuration { color: #7f705d; }
+
+.funding { padding: 110px 6vw 130px; color: var(--paper); background: var(--ink); }
+.funding-intro { display: grid; grid-template-columns: 42% 58%; margin-bottom: 75px; }
+.funding-intro h2 { margin: 0; font: 900 clamp(3.8rem, 7vw, 8rem)/.86 Impact, "Arial Narrow", sans-serif; letter-spacing: -.035em; text-transform: uppercase; }
+.funding-intro > p:last-child { align-self: end; max-width: 570px; margin: 40px 0 0; font-size: 18px; line-height: 1.55; }
+.funding-options { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); }
+.funding-card { min-width: 0; }
+.funding-card + .funding-card { border-left: 1px solid var(--line); }
+.shop-visual, .support-statement { position: relative; height: clamp(340px, 42vw, 600px); overflow: hidden; }
+.shop-visual img { object-fit: cover; filter: saturate(.75) contrast(1.05); transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.shop-card:hover .shop-visual img { transform: scale(1.025); }
+.online-badge { position: absolute; top: 22px; right: 22px; padding: 9px 12px; color: var(--ink); background: var(--orange); font: 700 9px monospace; letter-spacing: .08em; text-transform: uppercase; }
+.support-statement { padding: 32px; color: var(--ink); background: var(--orange); }
+.support-statement > span { font: 700 10px monospace; letter-spacing: .1em; text-transform: uppercase; }
+.support-statement strong { position: absolute; top: 48%; left: 50%; transform: translate(-50%, -50%); font: 900 clamp(11rem, 24vw, 25rem)/1 Arial, sans-serif; opacity: .13; }
+.support-statement p { position: absolute; left: 32px; bottom: 27px; margin: 0; font: 900 clamp(3rem, 5vw, 5.5rem)/.82 Impact, sans-serif; letter-spacing: -.025em; text-transform: uppercase; }
+.funding-card-copy { padding: 38px 40px 42px; }
+.funding-card-meta { display: flex; justify-content: space-between; gap: 20px; padding-bottom: 15px; border-bottom: 1px solid var(--line); font: 700 9px monospace; letter-spacing: .08em; text-transform: uppercase; }
+.funding-card h3 { margin: 34px 0 25px; font: 900 clamp(2.8rem, 4.7vw, 5.3rem)/.87 Impact, "Arial Narrow", sans-serif; letter-spacing: -.025em; text-transform: uppercase; }
+.funding-card-copy > p:not(.funding-note) { max-width: 570px; min-height: 78px; font-size: 15px; line-height: 1.6; }
+.funding-note { margin: 28px 0 0; padding-left: 17px; border-left: 2px solid var(--orange); color: rgba(238,233,223,.65); font: 10px/1.5 monospace; text-transform: uppercase; }
+.funding-link { width: 100%; margin-top: 38px; padding: 17px 0; border: 0; border-top: 1px solid var(--orange); border-bottom: 1px solid var(--orange); color: var(--orange); background: transparent; display: flex; align-items: center; justify-content: space-between; font: 700 11px monospace; letter-spacing: .03em; text-align: left; text-transform: uppercase; cursor: pointer; transition: padding .2s, color .2s, background .2s; }
+.funding-link svg { width: 24px; }
+.funding-link:hover { padding-inline: 14px; color: var(--ink); background: var(--orange); }
+.support-payment { margin-top: 35px; }
+.support-payment label { display: flex; justify-content: space-between; padding-bottom: 8px; color: rgba(238,233,223,.65); font: 700 9px monospace; letter-spacing: .08em; text-transform: uppercase; }
+.support-amount { width: 100%; padding: 8px 0 12px; border: 0; border-bottom: 2px solid var(--paper); border-radius: 0; outline: 0; color: var(--paper); background: transparent; font: 900 clamp(2rem, 3vw, 3.2rem)/1 Impact, sans-serif; }
+.support-amount::placeholder { color: rgba(238,233,223,.2); }
+.support-amount:focus { border-color: var(--orange); }
+.support-payment .funding-link { margin-top: 25px; }
 
 .events-intro { min-height: 760px; display: grid; grid-template-columns: 42% 58%; background: var(--ink); }
 .events-photo { position: relative; overflow: hidden; }
@@ -192,6 +227,18 @@ footer { padding: 90px 5vw 30px; color: var(--ink); background: var(--paper); }
   .newsletter h2, .communities h2, .archive h2, .contact h2 { font-size: 3.5rem; }
   .newsletter-copy { margin-top: 55px; }
   .newsletter-input-row button span { display: none; }
+  .funding { padding: 75px 20px 85px; }
+  .funding-intro, .funding-options { grid-template-columns: 1fr; }
+  .funding-intro { gap: 35px; margin-bottom: 50px; }
+  .funding-intro h2 { font-size: 3.7rem; }
+  .funding-intro > p:last-child { margin-top: 10px; font-size: 15px; }
+  .funding-card + .funding-card { border-left: 0; border-top: 1px solid var(--line); }
+  .shop-visual, .support-statement { height: 390px; }
+  .support-statement { padding: 25px; }
+  .support-statement p { left: 25px; bottom: 23px; font-size: 3.7rem; }
+  .funding-card-copy { padding: 32px 24px 38px; }
+  .funding-card h3 { font-size: 3.4rem; }
+  .funding-card-copy > p:not(.funding-note) { min-height: 0; }
   .events-intro { min-height: 780px; display: block; position: relative; }
   .events-photo { position: absolute; inset: 0; }
   .events-photo::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.55); }

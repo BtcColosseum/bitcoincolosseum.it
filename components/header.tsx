@@ -11,12 +11,6 @@ const links = [
     href: "https://www.eventbrite.it/e/biglietti-bitcoin-colosseum-community-edition-1998950836763",
     external: true,
   },
-  { label: "Ritira all'evento", href: "https://shop.bitcoincolosseum.it/", external: true },
-  {
-    label: "Supportaci",
-    href: "https://shop.bitcoincolosseum.it/apps/46usMxdsLQ3UDA6CFyZ8MC2rRcHP/crowdfund",
-    external: true,
-  },
 ];
 
 export function Header() {

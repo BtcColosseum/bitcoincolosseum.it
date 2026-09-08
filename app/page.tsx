@@ -11,7 +11,7 @@ const ticketUrl = "https://www.eventbrite.it/e/biglietti-bitcoin-colosseum-commu
 const communities = [
   ["21 Milioni", "https://21milioni.com/"],
   ["Bitvero", "https://www.bitvero.it/"],
-  ["Bitcoin EDU Veneto", "https://t.me/Bitcoin_Veneto"],
+  ["Bitcoin EDU Veneto", "https://bitcoineduveneto.it"],
   ["Bitcoin Calabria", "https://t.me/BitcoinCalabria_BitCal"],
   ["Bitcoin Roma", "https://t.me/SatoshiRoma"],
   ["Bitcoin EDU Emilia Romagna", "https://t.me/Bitcoin_EDU_EmiliaRomagna"],

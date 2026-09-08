@@ -16,6 +16,9 @@ const communities = [
   ["Bitcoin Roma", "https://t.me/SatoshiRoma"],
   ["Bitcoin EDU Emilia Romagna", "https://t.me/Bitcoin_EDU_EmiliaRomagna"],
   ["Bitcoin Bologna", "https://t.me/SatoshiSpritzBologna"],
+  ["Bitcoin Report Italia", "https://t.me/Bitcoin_Report_Italia"],
+  ["Bitcoin Flash Mob Italia", "https://t.me/BitcoinFlashMobItalia"],
+  ["BTCPay Server Italia", "https://x.com/btcpay_italia"],
 ];
 
 export default function Home() {
@@ -133,7 +136,7 @@ export default function Home() {
         <div><p className="section-number">[ NETWORK ]</p><h2 id="community-title">Community<br /><em>confermate</em></h2></div>
         <div className="community-list">
           {communities.map(([name, url], index) => (
-            <a href={url} target="_blank" rel="noreferrer" key={name}><span>0{index + 1}</span><strong>{name}</strong><ArrowUpRight /></a>
+            <a href={url} target="_blank" rel="noreferrer" key={name}><span>{index < 9 ? "0" + (index + 1) : (index + 1)}</span><strong>{name}</strong><ArrowUpRight /></a>
           ))}
           <p>Lista in continuo aggiornamento.</p>
         </div>

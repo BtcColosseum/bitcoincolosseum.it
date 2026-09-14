@@ -19,6 +19,7 @@ const communities = [
   ["Bitcoin Report Italia", "https://t.me/Bitcoin_Report_Italia"],
   ["Bitcoin Flash Mob Italia", "https://t.me/BitcoinFlashMobItalia"],
   ["BTCPay Server Italia", "https://x.com/btcpay_italia"],
+  ["BitPolito", "https://bitpolito.it/"],
 ];
 
 export default function Home() {

@@ -13,6 +13,7 @@ const communities = [
   ["Bitvero", "https://www.bitvero.it/"],
   ["Bitcoin EDU Veneto", "https://bitcoineduveneto.it"],
   ["Bitcoin Calabria", "https://t.me/BitcoinCalabria_BitCal"],
+  ["Bitcoin Friûl", "https://bitcoinfriuli.it"],
   ["Bitcoin Roma", "https://t.me/SatoshiRoma"],
   ["Bitcoin EDU Emilia Romagna", "https://t.me/Bitcoin_EDU_EmiliaRomagna"],
   ["Bitcoin Bologna", "https://t.me/SatoshiSpritzBologna"],

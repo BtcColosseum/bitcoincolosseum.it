@@ -10,6 +10,7 @@ const ticketUrl = "https://www.eventbrite.it/e/biglietti-bitcoin-colosseum-commu
 
 const communities = [
   ["21 Milioni", "https://21milioni.com/"],
+  ["Arezzo Bitcoin Meetup", "https://t.me/arezzobitcoinmeetup"],
   ["Bitvero", "https://www.bitvero.it/"],
   ["Bitcoin EDU Veneto", "https://bitcoineduveneto.it"],
   ["Bitcoin Calabria", "https://t.me/BitcoinCalabria_BitCal"],

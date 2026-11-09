@@ -19,7 +19,7 @@ const communities = [
   ["Bitcoin EDU Emilia Romagna", "https://t.me/Bitcoin_EDU_EmiliaRomagna"],
   ["Bitcoin Bologna", "https://t.me/SatoshiSpritzBologna"],
   ["Bitcoin Report Italia", "https://t.me/Bitcoin_Report_Italia"],
-  ["Bitcoin Social Forum", "https://bitcoinsocialforum.it"],
+  ["Bitcoin Social Forum Firenze", "https://bitcoinsocialforum.it"],
   ["Bitcoin Flash Mob Italia", "https://t.me/BitcoinFlashMobItalia"],
   ["BTCPay Server Italia", "https://x.com/btcpay_italia"],
   ["BitPolito", "https://bitpolito.it/"],

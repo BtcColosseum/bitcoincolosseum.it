@@ -23,6 +23,7 @@ const communities = [
   ["Bitcoin Flash Mob Italia", "https://t.me/BitcoinFlashMobItalia"],
   ["BTCPay Server Italia", "https://x.com/btcpay_italia"],
   ["BitPolito", "https://bitpolito.it/"],
+  ["Mostro Italia", "https://t.me/MostroEuropaCommunity"],
   ["Satoshi Spritz Torino", "https://t.me/satoshispritztorino"],
   ["Bitcoin Torino", "https://www.bitcointorino.to"],
 ];

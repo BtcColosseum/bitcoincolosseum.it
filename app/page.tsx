@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Script from "next/script";
-import { BtcpayModalController, SupportCheckout, TshirtCheckout } from "@/components/btcpay-checkout";
+import { BtcpayModalController, SupportCheckout } from "@/components/btcpay-checkout";
 import { ContactForm } from "@/components/contact-form";
 import { Header } from "@/components/header";
 import { ArrowUpRight, Telegram, XLogo } from "@/components/icons";
@@ -55,24 +55,10 @@ export default function Home() {
         <div className="funding-intro">
           <p className="section-number">[ 00 / SOSTIENI IL BLOCCO ]</p>
           <h2 id="funding-title">Roma non si<br />costruisce <em>da sola.</em></h2>
-          <p>Bitcoin Colosseum è gratuito e indipendente. Una T-shirt prenotata o una donazione ci aiutano a pagare lo spazio e a rendere migliore il prossimo evento.</p>
+          <p>Bitcoin Colosseum è gratuito e indipendente. Una donazione ci aiuta a pagare lo spazio e a rendere migliore il prossimo evento.</p>
         </div>
 
         <div className="funding-options">
-          <article className="funding-card shop-card">
-            <div className="shop-visual">
-              <Image src="/images/tshirt.jpg" alt="T-shirt ufficiale Bitcoin Colosseum" fill sizes="(max-width: 700px) 100vw, 50vw" />
-              <span className="online-badge">Solo online</span>
-            </div>
-            <div className="funding-card-copy">
-              <div className="funding-card-meta"><span>01 / Shop</span><span>40.000 sats</span></div>
-              <h3>Prenota la tua<br /><em>T-shirt.</em></h3>
-              <p>Edizione Bitcoin Colosseum in cotone pesante, vestibilità ampia. La prenoti online adesso e la ritiri di persona all&apos;evento di Roma.</p>
-              <p className="funding-note">Non sarà acquistabile sul posto · Ritiro il 14 novembre 2026</p>
-              <TshirtCheckout />
-            </div>
-          </article>
-
           <article className="funding-card support-card">
             <div className="support-statement" aria-hidden="true">
               <span>Proof of support</span>
@@ -80,7 +66,7 @@ export default function Home() {
               <p>Libero.<br />Indipendente.<br />A Roma.</p>
             </div>
             <div className="funding-card-copy">
-              <div className="funding-card-meta"><span>02 / Supportaci</span><span>Scegli tu quanto</span></div>
+              <div className="funding-card-meta"><span>01 / Supportaci</span><span>Scegli tu quanto</span></div>
               <h3>Metti energia<br />nel prossimo <em>blocco.</em></h3>
               <p>Ogni sat va direttamente all&apos;evento: location, ospiti e un&apos;esperienza migliore per tutta la community. Nessun intermediario, tramite BTCPay Server.</p>
               <p className="funding-note">Donazione disponibile esclusivamente online</p>

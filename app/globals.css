@@ -82,13 +82,10 @@ em { color: var(--orange); font-family: Georgia, serif; font-weight: 400; text-t
 .funding-intro { display: grid; grid-template-columns: 42% 58%; margin-bottom: 75px; }
 .funding-intro h2 { margin: 0; font: 900 clamp(3.8rem, 7vw, 8rem)/.86 Impact, "Arial Narrow", sans-serif; letter-spacing: -.035em; text-transform: uppercase; }
 .funding-intro > p:last-child { align-self: end; max-width: 570px; margin: 40px 0 0; font-size: 18px; line-height: 1.55; }
-.funding-options { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); }
+.funding-options { border: 1px solid var(--line); }
 .funding-card { min-width: 0; }
-.funding-card + .funding-card { border-left: 1px solid var(--line); }
-.shop-visual, .support-statement { position: relative; height: clamp(340px, 42vw, 600px); overflow: hidden; }
-.shop-visual img { object-fit: cover; filter: saturate(.75) contrast(1.05); transition: transform .6s cubic-bezier(.2,.7,.2,1); }
-.shop-card:hover .shop-visual img { transform: scale(1.025); }
-.online-badge { position: absolute; top: 22px; right: 22px; padding: 9px 12px; color: var(--ink); background: var(--orange); font: 700 9px monospace; letter-spacing: .08em; text-transform: uppercase; }
+.support-card { display: grid; grid-template-columns: 1fr 1fr; }
+.support-statement { position: relative; min-height: clamp(520px, 42vw, 600px); overflow: hidden; }
 .support-statement { padding: 32px; color: var(--ink); background: var(--orange); }
 .support-statement > span { font: 700 10px monospace; letter-spacing: .1em; text-transform: uppercase; }
 .support-statement strong { position: absolute; top: 48%; left: 50%; transform: translate(-50%, -50%); font: 900 clamp(11rem, 24vw, 25rem)/1 Arial, sans-serif; opacity: .13; }
@@ -228,12 +225,12 @@ footer { padding: 90px 5vw 30px; color: var(--ink); background: var(--paper); }
   .newsletter-copy { margin-top: 55px; }
   .newsletter-input-row button span { display: none; }
   .funding { padding: 75px 20px 85px; }
-  .funding-intro, .funding-options { grid-template-columns: 1fr; }
+  .funding-intro { grid-template-columns: 1fr; }
   .funding-intro { gap: 35px; margin-bottom: 50px; }
   .funding-intro h2 { font-size: 3.7rem; }
   .funding-intro > p:last-child { margin-top: 10px; font-size: 15px; }
-  .funding-card + .funding-card { border-left: 0; border-top: 1px solid var(--line); }
-  .shop-visual, .support-statement { height: 390px; }
+  .support-card { grid-template-columns: 1fr; }
+  .support-statement { min-height: 390px; }
   .support-statement { padding: 25px; }
   .support-statement p { left: 25px; bottom: 23px; font-size: 3.7rem; }
   .funding-card-copy { padding: 32px 24px 38px; }

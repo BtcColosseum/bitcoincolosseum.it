@@ -57,15 +57,6 @@ export function BtcpayModalController() {
   );
 }
 
-export function TshirtCheckout() {
-  return (
-    <form method="post" action="https://shop.bitcoincolosseum.it/apps/3UauT4VpveyLCPFsh9Qqqj5mNwFE/pos" target="btcpay" onSubmit={showCheckout}>
-      <input type="hidden" name="choiceKey" value="t-shirt-1" />
-      <button className="funding-link" type="submit"><span>Prenota per 40.000 sats</span><ArrowUpRight /></button>
-    </form>
-  );
-}
-
 export function SupportCheckout() {
   return (
     <form className="support-payment" method="post" action="https://shop.bitcoincolosseum.it/api/v1/invoices" target="btcpay" onSubmit={showCheckout}>
